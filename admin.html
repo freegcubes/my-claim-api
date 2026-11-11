@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Admin Dashboard</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    color: #38bdf8;
+}
+
+input, button {
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+input {
+    width: 90%;
+}
+
+button {
+    background: #0284c7;
+    color: white;
+    cursor: pointer;
+}
+
+.card {
+    background: #1e293b;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+#status {
+    color: #facc15;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>💎 Demo Admin Dashboard</h1>
+<p>Claim Requests</p>
+
+<input
+    type="password"
+    id="adminKey"
+    placeholder="Enter Admin Key"
+>
+
+<br>
+
+<button onclick="loadClaims()">View Requests</button>
+
+<p id="status"></p>
+<div id="claims"></div>
+
+</div>
+
+<script>
+async function loadClaims() {
+    const key = document.getElementById("adminKey").value;
+    const status = document.getElementById
